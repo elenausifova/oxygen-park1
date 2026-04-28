@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Долина Кислорода — Экстрим парк</title>
-<meta name="description" content="Экстрим-парк в Ставрополе: горнолыжная трасса, тюбинг, качели, скалодром, прогулочные зоны и Save Love Coffee." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Долина кислорода</title>
 
 <style>
-@font-face{font-family:'SONGER Semi Expanded';src:url('fonts/SONGER-SemiExpanded.woff2') format('woff2');font-display:swap;}
-@font-face{font-family:'Loew Next';src:url('fonts/LoewNext-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
-@font-face{font-family:'Loew Next';src:url('fonts/LoewNext-Medium.woff2') format('woff2');font-weight:700;font-display:swap;}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
-
-:root{
-  --dark:#07100c;--deep:#0b1f16;--green:#153f2b;--gold:#e7c46b;--gold2:#b98f32;--cream:#fff7e6;
-  --glass:rgba(255,255,255,.12);--border:rgba(255,255,255,.18);--shadow:0 32px 90px rgba(0,0,0,.36);
+@font-face{
+font-family:'Songer';
+src:url('fonts/SONGER SemiExpanded.otf');
 }
-*{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth} body{font-family:'Loew Next','Montserrat',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden;line-height:1.7} a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button,input,select{font-family:inherit}
-body::before{content:"";position:fixed;inset:0;z-index:-5;background:radial-gradient(circle at 20% 10%,rgba(231,196,107,.16),transparent 32%),radial-gradient(circle at 80% 10%,rgba(78,177,111,.14),transparent 34%),linear-gradient(120deg,#07100c,#113321,#07100c);background-size:140% 140%;animation:bgMove 18s ease infinite}@keyframes bgMove{50%{background-position:100% 50%}}
-.noise{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.04;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:4px 4px}.cursor-glow{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(231,196,107,.18),transparent 66%);transform:translate(-50%,-50%);mix-blend-mode:screen}
-.preloader{position:fixed;inset:0;z-index:99999;background:#07100c;display:grid;place-items:center;transition:.8s ease}.preloader.hide{opacity:0;visibility:hidden}.loader-card{text-align:center;animation:float 3s ease-in-out infinite}.loader-mark{width:148px;height:104px;margin:0 auto 18px;display:grid;place-items:center;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:0 20px 55px rgba(0,0,0,.36),inset 0 1px 0 rgba(255,255,255,.14);backdrop-filter:blur(14px)}.loader-mark img{width:118px;max-height:82px;object-fit:contain;filter:drop-shadow(0 16px 24px rgba(0,0,0,.45))}.loader-card span{letter-spacing:6px;text-transform:uppercase;color:var(--gold);font-size:11px;font-weight:900}@keyframes float{50%{transform:translateY(-10px)}}
-.header{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 28px));z-index:5000;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:10px 16px;border:1px solid rgba(255,255,255,.14);border-radius:30px;background:linear-gradient(135deg,rgba(7,16,12,.72),rgba(7,16,12,.42));backdrop-filter:blur(26px);box-shadow:0 20px 55px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.08)}
-.header-left,.header-right{display:flex;align-items:center;gap:9px}.header-right{justify-content:flex-end}.center-brand{display:flex;align-items:center;justify-content:center;gap:13px;text-align:left;min-width:292px;transition:.28s ease}.center-brand:hover{transform:translateY(-1px)}.logo-pill{position:relative;display:grid;place-items:center;width:auto;height:auto;border-radius:0;background:transparent;border:0;box-shadow:none;overflow:visible}.logo-pill::before{display:none}.logo-pill img{position:relative;z-index:2;width:92px;max-height:64px;object-fit:contain;filter:drop-shadow(0 11px 18px rgba(0,0,0,.42))}.brand-name{display:flex;flex-direction:column;line-height:1.04}.brand-name b{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:21px;letter-spacing:.3px;color:#fff7e6;text-transform:uppercase;text-shadow:0 8px 24px rgba(0,0,0,.35)}.brand-name span{margin-top:4px;font-size:10px;font-weight:900;letter-spacing:3.2px;color:var(--gold);text-transform:uppercase}
-.nav{display:flex;align-items:center;gap:7px}.nav a,.social-link,.phone-link,.book-small{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:999px;padding:10px 13px;font-size:12px;font-weight:900;transition:.25s;white-space:nowrap}.nav a{color:rgba(255,247,230,.86)}.nav a:hover,.social-link:hover,.phone-link:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}.phone-link,.social-link{border:1px solid rgba(231,196,107,.32);color:var(--gold);background:rgba(255,255,255,.055)}.book-small{border:0;background:linear-gradient(135deg,#fff0b8,var(--gold),var(--gold2));color:#102016;box-shadow:0 12px 28px rgba(231,196,107,.25)}.phone-icon{font-size:16px;line-height:1}.soc-round{width:34px;height:34px;padding:0;border-radius:50%}
-.hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;padding:130px 24px 54px;overflow:hidden}.hero-bg{position:absolute;inset:0;z-index:-4;background:url('hero.jpg') center/cover no-repeat;transform:scale(1.06);animation:heroZoom 22s ease-in-out infinite alternate}@keyframes heroZoom{to{transform:scale(1.14) translateY(-12px)}}.hero::after{content:"";position:absolute;inset:0;z-index:-3;background:linear-gradient(90deg,rgba(7,16,12,.92),rgba(7,16,12,.42),rgba(7,16,12,.76)),linear-gradient(0deg,rgba(7,16,12,1),transparent 45%)}.sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}.sparkles i{position:absolute;width:5px;height:5px;background:#fff5b8;border-radius:50%;box-shadow:0 0 18px #fff2a1;animation:spark 6s linear infinite;opacity:.8}@keyframes spark{0%{transform:translateY(120vh) scale(.4);opacity:0}20%{opacity:.9}100%{transform:translateY(-20vh) scale(1.2);opacity:0}}
-.hero-inner{width:min(1180px,100%);margin:0 auto;display:grid;grid-template-columns:1.08fr .72fr;gap:28px;align-items:end}.kicker{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid var(--border);font-size:12px;font-weight:900;color:var(--gold);letter-spacing:1.6px;text-transform:uppercase;backdrop-filter:blur(12px)}h1{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:clamp(48px,7vw,104px);line-height:.92;letter-spacing:-2px;margin:22px 0;text-shadow:0 24px 60px rgba(0,0,0,.45);text-transform:uppercase}.hero-text{font-size:clamp(16px,2vw,21px);max-width:760px;color:rgba(255,247,230,.9)}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{border:0;cursor:pointer;border-radius:999px;padding:17px 24px;font-weight:900;font-size:14px;transition:.25s;display:inline-flex;align-items:center;gap:10px}.btn-primary{background:linear-gradient(135deg,#fff0b8,var(--gold),var(--gold2));color:#102016;box-shadow:0 18px 35px rgba(231,196,107,.28)}.btn-ghost{background:rgba(255,255,255,.12);border:1px solid var(--border);color:#fff;backdrop-filter:blur(10px)}.btn:hover{transform:translateY(-4px)}.hero-panel{background:rgba(255,255,255,.12);border:1px solid var(--border);border-radius:34px;padding:22px;backdrop-filter:blur(18px);box-shadow:var(--shadow)}.panel-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:16px}.badge{font-size:12px;font-weight:900;color:#102016;background:#fff0b8;padding:8px 11px;border-radius:999px}.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{padding:15px;border-radius:22px;background:rgba(7,16,12,.38);border:1px solid rgba(255,255,255,.12)}.stat b{display:block;font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:30px;color:var(--gold);line-height:1}.stat span{font-size:12px;color:rgba(255,247,230,.78);font-weight:700}
-section{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:78px 0;opacity:0;transform:translateY(34px);transition:1s ease}section.active{opacity:1;transform:none}.section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:28px}h2{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:clamp(34px,5vw,62px);line-height:1;letter-spacing:-1px;text-transform:uppercase}.lead{max-width:680px;color:rgba(255,247,230,.76);font-size:17px}.activities{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.activity{position:relative;min-height:460px;border-radius:34px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#123;transition:.35s}.activity:hover{transform:translateY(-8px)}.activity img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.7s}.activity:hover img{transform:scale(1.08)}.activity::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,16,12,.95),rgba(7,16,12,.18),transparent)}.activity-content{position:absolute;z-index:2;left:22px;right:22px;bottom:22px}.activity-icon{font-size:36px;margin-bottom:10px}.activity h3{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:26px;margin-bottom:8px;text-transform:uppercase}.activity p{font-size:14px;color:rgba(255,247,230,.84)}
-.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:stretch}.story-card{border-radius:34px;border:1px solid var(--border);background:rgba(255,255,255,.1);backdrop-filter:blur(18px);padding:32px;box-shadow:var(--shadow)}.story-card h3{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:34px;color:var(--gold);margin-bottom:14px;text-transform:uppercase}.story-card p{color:rgba(255,247,230,.8);margin-bottom:14px}.story-img{border-radius:34px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);min-height:420px}.story-img img{width:100%;height:100%;object-fit:cover}.gallery-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.big-shot,.small-shot{position:relative;overflow:hidden;border-radius:34px;border:1px solid var(--border);box-shadow:var(--shadow);cursor:pointer;background:#123}.big-shot{min-height:560px}.small-grid{display:grid;grid-template-columns:1fr;gap:18px}.small-shot{min-height:270px}.big-shot img,.small-shot img{width:100%;height:100%;object-fit:cover;transition:.6s}.big-shot:hover img,.small-shot:hover img{transform:scale(1.06)}.shot-label{position:absolute;left:18px;bottom:18px;padding:10px 13px;background:rgba(7,16,12,.62);border:1px solid var(--border);border-radius:999px;backdrop-filter:blur(14px);font-weight:900;font-size:12px;color:var(--gold)}.ticker{width:100%;overflow:hidden;padding:18px 0;border-block:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}.ticker-track{display:flex;gap:28px;width:max-content;animation:ticker 22s linear infinite}.ticker span{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:25px;color:rgba(231,196,107,.86);white-space:nowrap;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-50%)}}
-.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.info{padding:22px;border-radius:28px;background:rgba(255,255,255,.1);border:1px solid var(--border);backdrop-filter:blur(12px)}.info b{display:block;color:var(--gold);font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:26px;margin-bottom:6px}.info span{font-size:13px;color:rgba(255,247,230,.75)}.map-card{overflow:hidden;border-radius:34px;border:1px solid var(--border);box-shadow:var(--shadow);background:rgba(255,255,255,.1);min-height:100%}.map-card iframe{width:100%;height:100%;min-height:360px;border:0;filter:saturate(1.05) contrast(1.02)}.social-panel{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px}.social-big{display:inline-flex;align-items:center;gap:10px;padding:13px 16px;border-radius:999px;border:1px solid rgba(231,196,107,.32);background:rgba(255,255,255,.08);color:var(--gold);font-weight:900;transition:.25s}.social-big:hover{transform:translateY(-3px);background:rgba(231,196,107,.14)}
-.final-cta{position:relative;overflow:hidden;border-radius:42px;border:1px solid var(--border);background:url('panorama.jpg') center/cover no-repeat;box-shadow:var(--shadow);padding:58px}.final-cta::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,16,12,.94),rgba(7,16,12,.42))}.final-cta>*{position:relative;z-index:2}.final-cta h2{max-width:760px;margin-bottom:16px}.final-cta p{max-width:660px;color:rgba(255,247,230,.84);margin-bottom:24px}.mobile-cta{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:6000;border-radius:22px;padding:17px 18px;text-align:center;font-weight:900;color:#102016;background:linear-gradient(135deg,#fff0b8,var(--gold),var(--gold2));box-shadow:0 18px 45px rgba(0,0,0,.35)}
-.modal,.lightbox{position:fixed;inset:0;display:none;z-index:9000;background:rgba(0,0,0,.78);backdrop-filter:blur(12px)}.modal.active,.lightbox.active{display:flex}.modal{align-items:flex-end;justify-content:center}.sheet{width:min(560px,100%);border-radius:34px 34px 0 0;background:#08130e;border:1px solid var(--border);padding:24px;box-shadow:0 -30px 90px rgba(0,0,0,.5)}.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.sheet h3{font-family:'SONGER Semi Expanded','Playfair Display',serif;font-size:30px;color:var(--gold);text-transform:uppercase}.close{cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.1);font-size:22px}.form-grid{display:grid;gap:10px}input,select{width:100%;padding:15px 16px;border-radius:17px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;outline:none}option{background:#08130e}.pay{width:100%;margin-top:8px;padding:16px;border:0;border-radius:18px;background:linear-gradient(135deg,#fff0b8,var(--gold),var(--gold2));font-weight:900;color:#102016;cursor:pointer}.lightbox{align-items:center;justify-content:center;padding:24px}.lightbox img{max-width:94vw;max-height:88vh;border-radius:26px;box-shadow:0 40px 120px rgba(0,0,0,.65)}.footer{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:32px 0 120px;color:rgba(255,247,230,.58);font-size:13px;display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.12)}
-@media(max-width:1080px){.nav{display:none}.header{grid-template-columns:1fr auto 1fr}.center-brand{min-width:230px}.logo-pill img{width:76px;max-height:54px}.brand-name b{font-size:16px}.brand-name span{font-size:8px;letter-spacing:2.2px}.book-small{display:none}.social-link span{display:none}.social-link{width:38px;height:38px;padding:0}.hero-inner{grid-template-columns:1fr}.hero-panel{max-width:560px}.activities,.story,.gallery-wrap,.visit-grid{grid-template-columns:1fr}.activity{min-height:390px}.story-img{min-height:320px}.big-shot{min-height:390px}.small-shot{min-height:240px}.mobile-cta{display:block}.footer{display:block}.map-card iframe{height:320px}}
-@media(max-width:560px){.cursor-glow{display:none}.header{top:10px;border-radius:22px;padding:8px;gap:6px}.header-left,.header-right{gap:5px}.phone-link{font-size:0;width:38px;height:38px;padding:0}.phone-link .phone-icon{font-size:17px}.center-brand{min-width:auto;gap:8px}.logo-pill img{width:54px;max-height:42px}.brand-name b{font-size:12px;letter-spacing:.1px}.brand-name span{font-size:7px;letter-spacing:1.6px}.hero{padding:118px 16px 44px}.kicker{font-size:10px;letter-spacing:1px}.hero-text{font-size:15px}.btn{width:100%;justify-content:center}.panel-top{flex-wrap:wrap}.stat b{font-size:24px}.stat-grid{grid-template-columns:1fr 1fr}section{padding:56px 0}.section-head{display:block}.lead{margin-top:14px;font-size:15px}.activity{min-height:340px}.final-cta{padding:32px 22px}.sheet{border-radius:28px 28px 0 0}h1{font-size:44px}.info-grid{grid-template-columns:1fr}.social-panel{display:grid}.social-big{justify-content:center}}
+
+body{margin:0;font-family:'Songer', sans-serif;background:#0b0f0d;color:#fff;}
+
+header{
+position:fixed;top:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 30px;
+background:rgba(0,0,0,0.6);
+z-index:1000;
+}
+
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{width:60px;}
+.brand span{font-size:20px;}
+
+.contacts a{
+margin-left:10px;
+text-decoration:none;
+color:#c8a96a;
+}
+
+section{
+padding:100px 30px;
+scroll-margin-top:90px;
+}
+
+h2{text-align:center;margin-bottom:20px;}
+
+.modal{
+position:fixed;inset:0;
+display:flex;justify-content:center;align-items:center;
+background:rgba(0,0,0,0.7);
+display:none;
+}
+
+.modal.active{display:flex;}
+
+.sheet{
+background:#111;padding:20px;border-radius:20px;width:300px;
+}
+
+button{padding:10px;width:100%;background:#c8a96a;border:none;}
+
 </style>
 </head>
+
 <body>
-<div class="preloader" id="preloader"><div class="loader-card"><div class="loader-mark"><img src="logo.png" alt="Логотип"></div><span>загрузка парка</span></div></div>
-<div class="noise"></div><div class="cursor-glow" id="glow"></div>
-<header class="header">
-  <div class="header-left">
-    <a class="phone-link" href="tel:213131" aria-label="Позвонить"><span class="phone-icon">☎</span><span>21-31-31</span></a>
-  </div>
-  <a class="center-brand" href="#top" aria-label="На главную"><span class="logo-pill"><img src="logo.png" alt="Долина Кислорода Экстрим парк"></span><span class="brand-name"><b>Долина кислорода</b><span>экстрим парк</span></span></a>
-  <div class="header-right">
-    <nav class="nav"><a href="#activities">Активности</a><a href="#coffee">Save Love</a><a href="#gallery">Галерея</a><a href="#visit">Карта</a></nav>
-    <a class="social-link soc-round" href="https://www.instagram.com/o2extreme.park?igsh=cXdmdGN2bTBqemFu" target="_blank" aria-label="Instagram">◎</a>
-    <a class="social-link soc-round" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank" aria-label="MAX">M</a>
-    <button class="book-small" onclick="openBooking()">Забронировать</button>
-  </div>
+
+<header>
+<div class="brand">
+<img src="logo.png">
+<span>Долина кислорода</span>
+</div>
+
+<div class="contacts">
+<a href="tel:213131">📞</a>
+<a href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ">MAX</a>
+<a href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1">📍</a>
+</div>
 </header>
-<main id="top">
-  <section class="hero active">
-    <div class="hero-bg"></div><div class="sparkles" id="sparkles"></div>
-    <div class="hero-inner">
-      <div>
-        <div class="kicker">Ставрополь · активный отдых · кофе · эмоции</div>
-        <h1>Жизнь<br>в движении</h1>
-        <p class="hero-text">Здесь всё про эмоции: безопасные спуски, яркие маршруты и красивые виды. Кажется, будто ты оказался в настоящей курортной истории.</p>
-        <div class="cta-row"><button class="btn btn-primary" onclick="openBooking()">Забронировать активность →</button><a class="btn btn-ghost" href="#gallery">Посмотреть парк</a></div>
-      </div>
-      <div class="hero-panel">
-        <div class="panel-top"><span class="badge">family resort</span><span class="badge">10 минут от города</span></div>
-        <div class="stat-grid">
-          <div class="stat"><b>4+</b><span>зоны развлечений</span></div><div class="stat"><b>8м</b><span>качели с панорамой</span></div><div class="stat"><b>360°</b><span>вид на зелёные холмы</span></div><div class="stat"><b>☕</b><span>Save Love Coffee</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="ticker"><div class="ticker-track"><span>Экстрим парк · Save Love Coffee · Тюбинг · Горнолыжная трасса · Качели · Скалодром · Семейный отдых · </span><span>Экстрим парк · Save Love Coffee · Тюбинг · Горнолыжная трасса · Качели · Скалодром · Семейный отдых · </span></div></div>
-  <section id="activities">
-    <div class="section-head"><h2>Активности</h2><p class="lead">Здесь всё про эмоции: безопасные спуски, яркие маршруты и красивые виды. Кажется, будто ты оказался в настоящей курортной истории.</p></div>
-    <div class="activities">
-      <article class="activity"><img src="ski-slope.jpg" alt="Горнолыжная трасса"><div class="activity-content"><div class="activity-icon">⛷️</div><h3>Горнолыжная трасса</h3><p>Снежное полотно среди зелёных холмов, аккуратная зона катания и ощущение лёгкого альпийского отдыха прямо в Ставрополе.</p></div></article>
-      <article class="activity"><img src="tubing-track.jpg" alt="Тюбинговая трасса"><div class="activity-content"><div class="activity-icon">🛷</div><h3>Тюбинг</h3><p>Быстрые спуски, смех, азарт и яркий старт для тех, кто хочет эмоций без сложной подготовки.</p></div></article>
-      <article class="activity"><img src="sunset.jpg" alt="Качели и скалодром"><div class="activity-content"><div class="activity-icon">🎡</div><h3>Качели и скалодром</h3><p>Высота, панорама, фото-моменты и настоящая точка притяжения для детей, подростков и взрослых.</p></div></article>
-    </div>
-  </section>
-  <section id="coffee"><div class="story"><div class="story-card"><h3>Save Love Coffee</h3><p>Кофейня — не просто место для паузы. Это сердце территории, где можно согреться, встретиться с друзьями, спокойно отдохнуть после активностей и насладиться видом на парк.</p><p>Родители получают красивое пространство для отдыха, дети — безопасную атмосферу движения и развлечений, а вся семья — день, который хочется повторить.</p><button class="btn btn-primary" onclick="openBooking()">Запланировать визит</button></div><div class="story-img"><img src="save-love-terrace.jpg" alt="Save Love Coffee"></div></div></section>
-  <section id="gallery"><div class="section-head"><h2>Галерея впечатлений</h2><p class="lead">Живые маршруты, уютная кофейня, зелёные холмы и кадры, ради которых хочется приехать всей семьёй.</p></div><div class="gallery-wrap"><div class="big-shot gallery-item"><img src="panorama.jpg" alt="Панорама парка"><span class="shot-label">Панорама парка</span></div><div class="small-grid"><div class="small-shot gallery-item"><img src="save-love-climbing.jpg" alt="Кофейня и скалодром"><span class="shot-label">Save Love и скалодром</span></div><div class="small-shot gallery-item"><img src="ski-cafe.jpg" alt="Склон и кофейня"><span class="shot-label">Склон и кофейня</span></div></div></div></section>
-  <section id="visit"><div class="section-head"><h2>План визита</h2><p class="lead">Приезжайте на активный день, красивую прогулку, семейный праздник или спокойный кофе с видом на парк.</p></div><div class="visit-grid"><div><div class="info-grid"><div class="info"><b>01</b><span>Выберите активность и удобное время.</span></div><div class="info"><b>02</b><span>Приезжайте всей семьёй или компанией.</span></div><div class="info"><b>03</b><span>Катайтесь, гуляйте, фотографируйтесь.</span></div><div class="info"><b>04</b><span>Завершите день в Save Love Coffee.</span></div></div><div class="social-panel"><a class="social-big" href="https://www.instagram.com/o2extreme.park?igsh=cXdmdGN2bTBqemFu" target="_blank">◎ Instagram</a><a class="social-big" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank">M MAX</a><a class="social-big" href="https://yandex.ru/maps/?text=Ставрополь%20Полевая%20178" target="_blank">📍 Открыть карту</a></div></div><div class="map-card"><iframe src="https://maps.google.com/maps?q=Ставрополь%20Полевая%20178&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
-  <section><div class="final-cta"><h2>Подарите себе день, который запомнится</h2><p>Экстрим-парк «Долина Кислорода» — это место, где дети смеются громче, взрослые отдыхают спокойнее, а обычный выходной превращается в маленькое приключение.</p><button class="btn btn-primary" onclick="openBooking()">Забронировать активность</button></div></section>
-</main>
-<footer class="footer"><span>© Долина Кислорода · Экстрим парк</span><span>Телефон: 21-31-31 · Ставрополь, Полевая 178</span></footer>
-<a class="mobile-cta" onclick="openBooking()">Забронировать активность</a>
-<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select><option>Горнолыжная трасса</option><option>Тюбинг</option><option>8-метровые качели</option><option>Скалодром</option><option>Визит в парк + Save Love Coffee</option></select><input type="date"><input type="time"><input type="text" placeholder="Ваше имя"><input type="tel" placeholder="Телефон"><button class="pay">Отправить заявку</button></div></div></div>
-<div class="lightbox" id="lightbox"><img id="lightboxImg" alt="Фото парка"></div>
+
+<section>
+<h2>Активности</h2>
+<p>Горнолыжная трасса, тюбинг, качели.</p>
+</section>
+
+<section>
+<h2>Карта</h2>
+<a href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1">Открыть Яндекс карту</a>
+</section>
+
+<button onclick="openBooking()">Забронировать</button>
+
+<div class="modal" id="modal">
+<div class="sheet">
+<input placeholder="Имя">
+<input placeholder="Телефон">
+<button>Отправить</button>
+</div>
+</div>
+
 <script>
-window.addEventListener('load',()=>setTimeout(()=>document.getElementById('preloader').classList.add('hide'),650));
-const glow=document.getElementById('glow');document.addEventListener('mousemove',e=>{if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';}});
-const sparkles=document.getElementById('sparkles');for(let i=0;i<34;i++){const s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.animationDelay=Math.random()*6+'s';s.style.animationDuration=(4+Math.random()*6)+'s';sparkles.appendChild(s)}
-const sections=document.querySelectorAll('section:not(.hero)');const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')})},{threshold:.14});sections.forEach(s=>observer.observe(s));
-function openBooking(){document.getElementById('modal').classList.add('active')} function closeBooking(){document.getElementById('modal').classList.remove('active')} document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeBooking()});
-document.querySelectorAll('.gallery-item img').forEach(img=>{img.addEventListener('click',()=>{document.getElementById('lightboxImg').src=img.src;document.getElementById('lightbox').classList.add('active')})});document.getElementById('lightbox').addEventListener('click',()=>document.getElementById('lightbox').classList.remove('active'));
+function openBooking(){
+document.getElementById('modal').classList.add('active');
+}
 </script>
+
 </body>
 </html>
