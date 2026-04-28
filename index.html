@@ -178,6 +178,35 @@ section{scroll-margin-top:170px;}
   content:none !important;
 }
 
+
+/* ===== ONLY REQUESTED FINAL FIXES ===== */
+.max-logo-link{
+  min-width:34px !important;
+  width:34px !important;
+  height:34px !important;
+  padding:0 !important;
+  overflow:visible !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.max-logo-link img{
+  width:22px !important;
+  height:22px !important;
+  max-width:22px !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+
+#activities .section-head{
+  justify-content:flex-start !important;
+}
+
+#activities .section-head .lead{
+  display:none !important;
+}
+
 </style>
 </head>
 <body>
@@ -201,7 +230,7 @@ section{scroll-margin-top:170px;}
     <a class="social-link map-link" href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1/YEsYdgNmSEUCQFpvfXxzeXVgYQ==/?ll=42.046295%2C45.028674&z=17.92" target="_blank" rel="noopener" aria-label="Открыть карту">
       <svg class="icon-gold" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg><span class="hide-mobile-word">Карта</span>
     </a>
-    <a class="max-logo-link" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank" rel="noopener" aria-label="MAX"><img src="max-logo.svg" alt="MAX"></a>
+    <a class="max-logo-link" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank" rel="noopener" aria-label="MAX"><img src="MAX-32x32.png" alt="MAX"></a>
     <button class="book-small" onclick="openBooking()">Забронировать</button>
   </div>
 </header>
@@ -212,7 +241,7 @@ section{scroll-margin-top:170px;}
       <div>
         <div class="kicker">Ставрополь · активный отдых · эмоции</div>
         <h1>Жизнь<br>в движении</h1>
-        <p class="hero-text">Здесь всё про эмоции: безопасные спуски, яркие маршруты и красивые виды. Кажется, будто ты оказался в настоящей курортной истории.</p>
+        
         <div class="cta-row"><button class="btn btn-primary" onclick="openBooking()">Забронировать активность →</button><a class="btn btn-ghost" href="#gallery">Посмотреть парк</a></div>
       </div>
       <div class="hero-panel">
@@ -225,11 +254,11 @@ section{scroll-margin-top:170px;}
   </section>
   <div class="ticker"><div class="ticker-track"><span>Экстрим парк · Кофейня · Тюбинг · Горнолыжная трасса · Качели · Скалодром · Семейный отдых · </span><span>Экстрим парк · Кофейня · Тюбинг · Горнолыжная трасса · Качели · Скалодром · Семейный отдых · </span></div></div>
   <section id="activities">
-    <div class="section-head"><h2>Активности</h2><p class="lead">Здесь всё про эмоции: безопасные спуски, яркие маршруты и красивые виды. Кажется, будто ты оказался в настоящей курортной истории.</p></div>
+    <div class="section-head"><h2>Активности</h2></div>
     <div class="activities">
       <article class="activity activity-ski"><img src="save-love-climbing.jpg" alt="Горнолыжная трасса"><div class="activity-content"><div class="activity-icon">⛷️</div><h3>Горнолыжная трасса</h3><p>Снежный склон для яркого катания среди зелёных холмов. Лёгкий драйв, красивые виды и эмоции для всей семьи.</p></div></article>
       <article class="activity activity-tubing"><img src="tubing-track.jpg" alt="Тюбинг горка"><div class="activity-content"><div class="activity-icon">🛷</div><h3>Тюбинг горка</h3><p>Извилистая трасса для весёлых спусков без подготовки. Быстро, безопасно и очень эмоционально.</p></div></article>
-      <article class="activity activity-swings"><img src="sunset.jpg" alt="Восьмиметровые качели"><div class="activity-content"><div class="activity-icon">🎡</div><h3>Восьмиметровые качели</h3><p>Высокий полёт над парком, панорама холмов и тот самый вау-момент, который хочется снять на видео.</p></div></article>
+      <article class="activity activity-swings"><img src="sunset.jpg" alt="8-ми метровые качели"><div class="activity-content"><div class="activity-icon">🎡</div><h3>8-ми метровые качели</h3><p>Высокий полёт над парком, панорама холмов и тот самый вау-момент, который хочется снять на видео.</p></div></article>
       <article class="activity activity-climbing"><img src="save-love-terrace.jpg" alt="Скалодром"><div class="activity-content"><div class="activity-icon">🧗</div><h3>Скалодром</h3><p>Яркая зона для маленьких покорителей высоты. Безопасно, интересно и отлично для активного семейного дня.</p></div></article>
     </div>
   </section>
@@ -240,7 +269,7 @@ section{scroll-margin-top:170px;}
 </main>
 <footer class="footer"><span>© Долина Кислорода · Экстрим парк</span><span>Телефон: 21-31-31 · Ставрополь, Полевая улица, 178стр1</span></footer>
 <a class="mobile-cta" onclick="openBooking()">Забронировать активность</a>
-<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select><option>Горнолыжная трасса</option><option>Тюбинг горка</option><option>Восьмиметровые качели</option><option>Скалодром</option><option>Визит в парк + кофейня</option></select><input type="date"><input type="time"><input type="text" placeholder="Ваше имя"><input type="tel" placeholder="Телефон"><button class="pay">Отправить заявку</button></div></div></div>
+<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select><option>Горнолыжная трасса</option><option>Тюбинг горка</option><option>8-ми метровые качели</option><option>Скалодром</option><option>Визит в парк + кофейня</option></select><input type="date"><input type="time"><input type="text" placeholder="Ваше имя"><input type="tel" placeholder="Телефон"><button class="pay">Отправить заявку</button></div></div></div>
 <div class="lightbox" id="lightbox"><img id="lightboxImg" alt="Фото парка"></div>
 <script>
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('preloader').classList.add('hide'),650));
