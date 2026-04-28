@@ -53,6 +53,131 @@ section{scroll-margin-top:132px;}
 @media(max-width:1080px){section{scroll-margin-top:178px}.header .social-link span{display:inline}.header .social-link{width:auto;height:38px;padding:0 10px}.header .map-link .hide-mobile-word{display:none}}
 @media(max-width:560px){section{scroll-margin-top:146px}.header .social-link{font-size:11px;padding:0 9px}.activity h3{min-height:auto}.activity-content{min-height:auto}.modal{align-items:center!important}.sheet{border-radius:28px!important}}
 
+
+
+/* ===== CLIENT FINAL FIXES ===== */
+html{scroll-padding-top:150px;}
+section{scroll-margin-top:150px;}
+.section-head{align-items:flex-start;}
+.section-head h2{margin-top:0;}
+.header{grid-template-columns:minmax(210px,1fr) auto minmax(210px,1fr);}
+.header-left{justify-content:flex-start;}
+.center-brand{justify-self:center;min-width:410px;gap:16px;}
+.logo-pill img{width:108px;max-height:76px;filter:drop-shadow(0 12px 18px rgba(0,0,0,.42));}
+.brand-name b{font-size:25px;}
+.brand-name span{font-size:11px;letter-spacing:3.6px;}
+.phone-svg{width:17px;height:17px;flex:0 0 17px;color:var(--gold);}
+.coffee-header{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:0;background:transparent;border-radius:0;padding:0;transition:.25s ease;}
+.coffee-header img{width:39px;height:39px;object-fit:contain;filter:sepia(1) saturate(1.4) hue-rotate(355deg) brightness(1.1) drop-shadow(0 8px 12px rgba(0,0,0,.38));}
+.coffee-header:hover{transform:translateY(-2px) scale(1.04);}
+.max-logo-link{display:inline-flex;align-items:center;justify-content:center;height:42px;min-width:105px;padding:0;border:0;background:transparent;border-radius:0;transition:.25s ease;}
+.max-logo-link img{height:31px;width:auto;display:block;filter:drop-shadow(0 8px 14px rgba(0,0,0,.38));}
+.max-logo-link:hover{transform:translateY(-2px) scale(1.03);}
+.modal{align-items:center!important;justify-content:center!important;padding:18px;}
+.sheet{border-radius:34px!important;max-height:calc(100vh - 36px);overflow:auto;}
+.activity h3{min-height:68px;display:flex;align-items:flex-end;}
+.activity-content{min-height:205px;display:flex;flex-direction:column;justify-content:flex-end;}
+.activity p{min-height:88px;}
+.story-card h3,.section-head h2{display:flex;align-items:flex-end;min-height:1.1em;}
+.story-card::before{content:"";display:block;width:74px;height:74px;margin-bottom:16px;background:url('coffee-icon.png') center/contain no-repeat;filter:sepia(1) saturate(1.4) hue-rotate(355deg) brightness(1.1) drop-shadow(0 10px 16px rgba(0,0,0,.35));}
+@media(max-width:1080px){
+  html{scroll-padding-top:188px;} section{scroll-margin-top:188px;}
+  .header{grid-template-columns:1fr auto 1fr;}
+  .center-brand{min-width:300px;gap:10px;}
+  .logo-pill img{width:78px;max-height:58px;}
+  .brand-name b{font-size:17px;}.brand-name span{font-size:8px;letter-spacing:2.2px;}
+  .coffee-header{width:38px;height:38px}.coffee-header img{width:32px;height:32px;}
+  .max-logo-link{min-width:48px;height:38px}.max-logo-link img{height:27px;max-width:46px;object-fit:cover;object-position:left center;}
+  .activity p{min-height:auto;}
+}
+@media(max-width:560px){
+  html{scroll-padding-top:158px;} section{scroll-margin-top:158px;}
+  .center-brand{gap:7px;}
+  .logo-pill img{width:55px;max-height:43px;}
+  .brand-name b{font-size:12px;}.brand-name span{font-size:7px;letter-spacing:1.5px;}
+  .coffee-header{display:none;}
+  .phone-link{font-size:0;width:38px;height:38px;padding:0}.phone-link span{display:none}.phone-svg{width:18px;height:18px;}
+  .max-logo-link{min-width:38px;width:38px;overflow:hidden}.max-logo-link img{height:25px;max-width:none;transform:translateX(0);}
+  .activity h3,.activity-content{min-height:auto}.activity p{min-height:auto;}
+}
+
+
+/* ===== FINAL CLIENT FIXES: requested only ===== */
+html{scroll-padding-top:170px;}
+section{scroll-margin-top:170px;}
+.header{grid-template-columns:minmax(210px,1fr) auto minmax(210px,1fr);}
+.center-brand{justify-self:center;text-align:left;min-width:360px;gap:15px;}
+.logo-pill,.logo-pill img{background:transparent!important;border:0!important;box-shadow:none!important;}
+.logo-pill img{width:108px!important;max-height:76px!important;object-fit:contain!important;filter:drop-shadow(0 12px 18px rgba(0,0,0,.42))!important;}
+.brand-name b{font-size:24px!important;}
+.phone-link svg{width:18px;height:18px;color:var(--gold);flex:0 0 auto;}
+.coffee-header{background:transparent!important;border:0!important;box-shadow:none!important;}
+.coffee-header img{width:44px!important;height:44px!important;object-fit:contain!important;filter:drop-shadow(0 9px 13px rgba(0,0,0,.42))!important;}
+.max-logo-link{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;min-width:100px!important;}
+.max-logo-link img{height:34px!important;width:auto!important;max-width:112px!important;object-fit:contain!important;filter:drop-shadow(0 9px 14px rgba(0,0,0,.42))!important;}
+.modal{align-items:center!important;justify-content:center!important;padding:18px!important;}
+.sheet{border-radius:34px!important;max-height:calc(100vh - 36px);overflow:auto;}
+.activity-content{min-height:178px;display:flex;flex-direction:column;justify-content:flex-end;}
+.activity h3{min-height:62px;display:flex;align-items:flex-end;}
+.section-head{align-items:flex-start;}
+.section-head h2{margin-top:0;}
+@media(max-width:1080px){
+  html{scroll-padding-top:198px;} section{scroll-margin-top:198px;}
+  .header{grid-template-columns:1fr;justify-items:center;}
+  .center-brand{order:1;min-width:0;}
+  .header-left{order:2;justify-content:center;}
+  .header-right{order:3;justify-content:center;flex-wrap:wrap;}
+  .logo-pill img{width:86px!important;max-height:60px!important;}
+  .brand-name b{font-size:18px!important;}
+}
+@media(max-width:560px){
+  html{scroll-padding-top:168px;} section{scroll-margin-top:168px;}
+  .center-brand{gap:8px;}
+  .logo-pill img{width:58px!important;max-height:44px!important;}
+  .brand-name b{font-size:12px!important;}
+  .coffee-header img{width:32px!important;height:32px!important;}
+  .max-logo-link{min-width:40px!important;width:40px!important;overflow:hidden!important;}
+  .max-logo-link img{height:27px!important;max-width:none!important;}
+  .activity h3{min-height:auto;}
+  .activity-content{min-height:auto;}
+}
+
+
+/* ===== FINAL CLIENT FIXES ===== */
+.header-right{gap:12px;}
+.max-logo-link{min-width:74px!important;height:36px!important;overflow:visible!important;}
+.max-logo-link img{height:24px!important;width:auto!important;max-width:74px!important;object-fit:contain!important;}
+.activities{grid-template-columns:repeat(4,1fr);}
+.activity{min-height:430px;}
+.activity h3{min-height:64px;display:flex;align-items:flex-end;}
+.coffee-title{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.coffee-title img{width:52px;height:52px;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,0,0,.35));}
+.coffee-title h3{margin-bottom:0!important;}
+@media(max-width:1180px){.activities{grid-template-columns:repeat(2,1fr);}.activity h3{min-height:auto;}}
+@media(max-width:1080px){.header-right{gap:8px}.max-logo-link{min-width:54px!important;width:54px!important;height:34px!important;overflow:hidden!important}.max-logo-link img{height:22px!important;max-width:none!important;object-position:left center!important}.center-brand{min-width:250px;}}
+@media(max-width:560px){.activities{grid-template-columns:1fr}.max-logo-link{min-width:34px!important;width:34px!important}.max-logo-link img{height:21px!important}.center-brand{min-width:auto}.brand-name b{font-size:11px}.brand-name span{font-size:7px}.coffee-title img{width:42px;height:42px;}}
+
+
+/* FINAL IMAGE MATCH FIXES */
+.activity-ski img{object-position:center center;}
+.activity-tubing img{object-position:center center;}
+.activity-swings img{object-position:78% center;}
+.activity-climbing img{object-position:center center;}
+.story-img img{object-position:center center;}
+@media(max-width:560px){.activity-swings img{object-position:82% center;}}
+
+
+/* ===== MICRO FIXES: swings image + one coffee icon ===== */
+.activity-swings img{
+  object-position: 92% center !important;
+}
+
+/* Убираем второй декоративный значок кружки, оставляем только картинку рядом с названием */
+.story-card::before{
+  display:none !important;
+  content:none !important;
+}
+
 </style>
 </head>
 <body>
@@ -60,13 +185,23 @@ section{scroll-margin-top:132px;}
 <div class="noise"></div><div class="cursor-glow" id="glow"></div>
 <header class="header">
   <div class="header-left">
-    <a class="phone-link" href="tel:213131" aria-label="Позвонить"><span class="phone-icon">☎</span><span>21-31-31</span></a>
+    <a class="phone-link" href="tel:213131" aria-label="Позвонить">
+      <svg class="phone-svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.2 3.8 9.4 8c.4.8.2 1.7-.4 2.3l-1 1c1.3 2.5 3.2 4.4 5.7 5.7l1-1c.6-.6 1.6-.8 2.3-.4l4.2 2.2c.8.4 1.2 1.3 1 2.2-.3 1.5-1.6 2.5-3.1 2.5C9.6 22.5 1.5 14.4 1.5 4.9c0-1.5 1-2.8 2.5-3.1.9-.2 1.8.2 2.2 1Z" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>21-31-31</span>
+    </a>
+    
   </div>
-  <a class="center-brand" href="#top" aria-label="На главную"><span class="logo-pill"><img src="logo.png" alt="Долина Кислорода Экстрим парк"></span><span class="brand-name"><b>Долина кислорода</b><span>экстрим парк</span></span></a>
+
+  <a class="center-brand" href="#top" aria-label="На главную">
+    <span class="logo-pill"><img src="logo.png" alt="Долина Кислорода Экстрим парк"></span>
+    <span class="brand-name"><b>Долина кислорода</b><span>экстрим парк</span></span>
+  </a>
+
   <div class="header-right">
-    <nav class="nav"><a href="#activities">Активности</a><a href="#coffee">Кофейня</a><a href="#gallery">Галерея</a><a href="#visit">Карта</a></nav>
-    <a class="social-link map-link" href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1/YEsYdgNmSEUCQFpvfXxzeXVgYQ==/?ll=42.046295%2C45.028674&z=17.92" target="_blank" rel="noopener" aria-label="Открыть карту"><svg class="icon-gold" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg><span class="hide-mobile-word">Карта</span></a>
-    <a class="social-link max-link" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank" rel="noopener" aria-label="MAX">MAX</a>
+    <a class="social-link map-link" href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1/YEsYdgNmSEUCQFpvfXxzeXVgYQ==/?ll=42.046295%2C45.028674&z=17.92" target="_blank" rel="noopener" aria-label="Открыть карту">
+      <svg class="icon-gold" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg><span class="hide-mobile-word">Карта</span>
+    </a>
+    <a class="max-logo-link" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank" rel="noopener" aria-label="MAX"><img src="max-logo.svg" alt="MAX"></a>
     <button class="book-small" onclick="openBooking()">Забронировать</button>
   </div>
 </header>
@@ -92,19 +227,20 @@ section{scroll-margin-top:132px;}
   <section id="activities">
     <div class="section-head"><h2>Активности</h2><p class="lead">Здесь всё про эмоции: безопасные спуски, яркие маршруты и красивые виды. Кажется, будто ты оказался в настоящей курортной истории.</p></div>
     <div class="activities">
-      <article class="activity"><img src="ski-slope.jpg" alt="Горнолыжная трасса"><div class="activity-content"><div class="activity-icon">⛷️</div><h3>Горнолыжная трасса</h3><p>Снежное полотно среди зелёных холмов, аккуратная зона катания и ощущение лёгкого альпийского отдыха прямо в Ставрополе.</p></div></article>
-      <article class="activity"><img src="tubing-track.jpg" alt="Тюбинговая трасса"><div class="activity-content"><div class="activity-icon">🛷</div><h3>Тюбинг</h3><p>Быстрые спуски, смех, азарт и яркий старт для тех, кто хочет эмоций без сложной подготовки.</p></div></article>
-      <article class="activity"><img src="save-love-climbing.jpg" alt="Качели и скалодром"><div class="activity-content"><div class="activity-icon">🎡</div><h3>Качели и скалодром</h3><p>Высота, панорама, фото-моменты и настоящая точка притяжения для детей, подростков и взрослых.</p></div></article>
+      <article class="activity activity-ski"><img src="save-love-climbing.jpg" alt="Горнолыжная трасса"><div class="activity-content"><div class="activity-icon">⛷️</div><h3>Горнолыжная трасса</h3><p>Снежный склон для яркого катания среди зелёных холмов. Лёгкий драйв, красивые виды и эмоции для всей семьи.</p></div></article>
+      <article class="activity activity-tubing"><img src="tubing-track.jpg" alt="Тюбинг горка"><div class="activity-content"><div class="activity-icon">🛷</div><h3>Тюбинг горка</h3><p>Извилистая трасса для весёлых спусков без подготовки. Быстро, безопасно и очень эмоционально.</p></div></article>
+      <article class="activity activity-swings"><img src="sunset.jpg" alt="Восьмиметровые качели"><div class="activity-content"><div class="activity-icon">🎡</div><h3>Восьмиметровые качели</h3><p>Высокий полёт над парком, панорама холмов и тот самый вау-момент, который хочется снять на видео.</p></div></article>
+      <article class="activity activity-climbing"><img src="save-love-terrace.jpg" alt="Скалодром"><div class="activity-content"><div class="activity-icon">🧗</div><h3>Скалодром</h3><p>Яркая зона для маленьких покорителей высоты. Безопасно, интересно и отлично для активного семейного дня.</p></div></article>
     </div>
   </section>
-  <section id="coffee"><div class="story"><div class="story-card"><h3>Кофейня</h3><p>Кофейня — не просто место для паузы. Это сердце территории, где можно согреться, встретиться с друзьями, спокойно отдохнуть после активностей и насладиться видом на парк.</p><p>Родители получают красивое пространство для отдыха, дети — безопасную атмосферу движения и развлечений, а вся семья — день, который хочется повторить.</p><button class="btn btn-primary" onclick="openBooking()">Запланировать визит</button></div><div class="story-img"><img src="save-love-terrace.jpg" alt="Кофейня"></div></div></section>
-  <section id="gallery"><div class="section-head"><h2>Галерея впечатлений</h2><p class="lead">Живые маршруты, уютная кофейня, зелёные холмы и кадры, ради которых хочется приехать всей семьёй.</p></div><div class="gallery-wrap"><div class="big-shot gallery-item"><img src="panorama.jpg" alt="Панорама парка"><span class="shot-label">Панорама парка</span></div><div class="small-grid"><div class="small-shot gallery-item"><img src="save-love-climbing.jpg" alt="Кофейня и скалодром"><span class="shot-label">Кофейня и скалодром</span></div><div class="small-shot gallery-item"><img src="ski-cafe.jpg" alt="Склон и кофейня"><span class="shot-label">Склон и кофейня</span></div></div></div></section>
+  <section id="coffee"><div class="story"><div class="story-card"><div class="coffee-title"><img src="coffee-icon.png" alt="Кофейня Save Love"><h3>Кофейня Save Love</h3></div><p>Кофейня Save Love — уютное место для паузы между активностями. Здесь можно согреться, выпить кофе, отдохнуть после спусков и насладиться атмосферой парка.</p><p>Родители получают красивое пространство для отдыха, дети — безопасную атмосферу движения и развлечений, а вся семья — день, который хочется повторить.</p><button class="btn btn-primary" onclick="openBooking()">Запланировать визит</button></div><div class="story-img"><img src="ski-cafe.jpg" alt="Кофейня Save Love"></div></div></section>
+  <section id="gallery"><div class="section-head"><h2>Галерея впечатлений</h2><p class="lead">Живые маршруты, уютная кофейня, зелёные холмы и кадры, ради которых хочется приехать всей семьёй.</p></div><div class="gallery-wrap"><div class="big-shot gallery-item"><img src="hero.jpg" alt="Панорама парка"><span class="shot-label">Панорама парка</span></div><div class="small-grid"><div class="small-shot gallery-item"><img src="panorama.jpg" alt="Скалодром"><span class="shot-label">Скалодром</span></div><div class="small-shot gallery-item"><img src="ski-cafe.jpg" alt="Кофейня Save Love"><span class="shot-label">Кофейня Save Love</span></div></div></div></section>
   <section id="visit"><div class="section-head"><h2>План визита</h2><p class="lead">Приезжайте на активный день, красивую прогулку, семейный праздник или спокойный кофе с видом на парк.</p></div><div class="visit-grid"><div><div class="info-grid"><div class="info"><b>01</b><span>Выберите активность и удобное время.</span></div><div class="info"><b>02</b><span>Приезжайте всей семьёй или компанией.</span></div><div class="info"><b>03</b><span>Катайтесь, гуляйте, фотографируйтесь.</span></div><div class="info"><b>04</b><span>Завершите день в уютной кофейне.</span></div></div><div class="social-panel"><a class="social-big" href="https://max.ru/u/f9LHodD0cOJ_8r7TDoElxYpzl7bE4DwgJvcSoS0PYh3o7sR41hGRbE7QAHQ" target="_blank" rel="noopener">MAX</a><a class="social-big" href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1/YEsYdgNmSEUCQFpvfXxzeXVgYQ==/?ll=42.046295%2C45.028674&z=17.92" target="_blank" rel="noopener">📍 Открыть Яндекс карту</a></div></div><div class="map-card map-preview"><iframe src="https://yandex.ru/map-widget/v1/?ll=42.046295%2C45.028674&z=17&pt=42.046295,45.028674,pm2rdl" loading="lazy" title="Яндекс карта — Полевая 178стр1"></iframe><a class="map-open" href="https://yandex.ru/maps/36/stavropol/house/polevaya_ulitsa_178str1/YEsYdgNmSEUCQFpvfXxzeXVgYQ==/?ll=42.046295%2C45.028674&z=17.92" target="_blank" rel="noopener">📍 Открыть маршрут</a></div></div></section>
   <section><div class="final-cta"><h2>Подарите себе день, который запомнится</h2><p>Экстрим-парк «Долина Кислорода» — это место, где дети смеются громче, взрослые отдыхают спокойнее, а обычный выходной превращается в маленькое приключение.</p><button class="btn btn-primary" onclick="openBooking()">Забронировать активность</button></div></section>
 </main>
 <footer class="footer"><span>© Долина Кислорода · Экстрим парк</span><span>Телефон: 21-31-31 · Ставрополь, Полевая улица, 178стр1</span></footer>
 <a class="mobile-cta" onclick="openBooking()">Забронировать активность</a>
-<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select><option>Горнолыжная трасса</option><option>Тюбинг</option><option>8-метровые качели</option><option>Скалодром</option><option>Визит в парк + кофейня</option></select><input type="date"><input type="time"><input type="text" placeholder="Ваше имя"><input type="tel" placeholder="Телефон"><button class="pay">Отправить заявку</button></div></div></div>
+<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select><option>Горнолыжная трасса</option><option>Тюбинг горка</option><option>Восьмиметровые качели</option><option>Скалодром</option><option>Визит в парк + кофейня</option></select><input type="date"><input type="time"><input type="text" placeholder="Ваше имя"><input type="tel" placeholder="Телефон"><button class="pay">Отправить заявку</button></div></div></div>
 <div class="lightbox" id="lightbox"><img id="lightboxImg" alt="Фото парка"></div>
 <script>
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('preloader').classList.add('hide'),650));
