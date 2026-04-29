@@ -302,12 +302,13 @@ function sendBooking() {
   }
 
   const data = {
-    from_name: name,
-    phone: phone,
-    date: date,
-    time: time,
-    activity: activity
-  };
+  from_name: name,
+  phone: phone,
+  date: date,
+  time: time,
+  activity: activity,
+  reply_to: "extremeparkoii@mail.ru"
+};
 
   emailjs.send("Park2026", "template_a1poeuj", data)
     .then(() => {
