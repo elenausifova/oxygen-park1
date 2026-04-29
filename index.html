@@ -301,7 +301,7 @@ function sendBooking() {
     return;
   }
 
-  emailjs.send("Park2026.", "template_a1poeuj", data)
+  emailjs.send("Park2026.".trim(), "template_a1poeuj".trim(), data)
     .then(() => {
       alert("Заявка отправлена 👍");
       modal.classList.remove("active");
