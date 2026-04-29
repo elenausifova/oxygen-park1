@@ -283,7 +283,9 @@ document.querySelectorAll('.gallery-item img').forEach(img=>{img.addEventListene
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
-emailjs.init("JxqkDZjM8COO3tA9O");
+emailjs.init({
+  publicKey: "JxqkDZjM8COO3tA9O"
+});
 
 function sendBooking() {
   const modal = document.getElementById("modal");
