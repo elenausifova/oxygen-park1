@@ -7,10 +7,10 @@
 <meta name="description" content="Экстрим-парк в Ставрополе: горнолыжная трасса, тюбинг, качели, скалодром, прогулочные зоны и Save Love Coffee." />
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
 @font-face{font-family:'SONGER Semi Expanded';src:url('fonts/songersemiexpanded_heavy.otf') format('opentype');font-display:swap;}
 @font-face{font-family:'Loew Next';src:url('fonts/LoewNext-Regular.woff2') format('woff2');font-weight:400;font-display:swap;}
 @font-face{font-family:'Loew Next';src:url('fonts/LoewNext-Medium.woff2') format('woff2');font-weight:700;font-display:swap;}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
 
 :root{
   --dark:#07100c;--deep:#0b1f16;--green:#153f2b;--gold:#e7c46b;--gold2:#b98f32;--cream:#fff7e6;
@@ -269,7 +269,7 @@ section{scroll-margin-top:170px;}
 </main>
 <footer class="footer"><span>© Долина Кислорода · Экстрим парк</span><span>Телефон: 21-31-31 · Ставрополь, Полевая улица, 178стр1</span></footer>
 <a class="mobile-cta" onclick="openBooking()">Забронировать активность</a>
-<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select id="activity" name="activity"><option>Горнолыжная трасса</option><option>Тюбинг горка</option><option>8-ми метровые качели</option><option>Скалодром</option><option>Визит в парк + кофейня</option></select><input type="date" id="date" name="date"><input type="time" id="time" name="time"><input type="text" id="from_name" name="from_name" placeholder="Ваше имя"><input type="tel" id="phone" name="phone" placeholder="Телефон"><button class="pay" onclick="sendBooking()">Отправить заявку</button></div></div></div>
+<div class="modal" id="modal"><div class="sheet"><div class="sheet-head"><h3>Бронирование</h3><div class="close" onclick="closeBooking()">×</div></div><div class="form-grid"><select><option>Горнолыжная трасса</option><option>Тюбинг горка</option><option>8-ми метровые качели</option><option>Скалодром</option><option>Визит в парк + кофейня</option></select><input type="date"><input type="time"><input type="text" placeholder="Ваше имя"><input type="tel" placeholder="Телефон"><button class="pay" onclick="sendBooking()">Отправить заявку</button></div></div></div>
 <div class="lightbox" id="lightbox"><img id="lightboxImg" alt="Фото парка"></div>
 <script>
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('preloader').classList.add('hide'),650));
@@ -288,26 +288,32 @@ emailjs.init("JxqkDZjM8COO3tA9O");
 function sendBooking() {
   const modal = document.getElementById("modal");
 
-  const data = {
-    from_name: document.querySelector("#modal input[placeholder='Ваше имя']").value,
-    phone: document.querySelector("#modal input[placeholder='Телефон']").value,
-    date: document.querySelector("#modal input[type='date']").value,
-    time: document.querySelector("#modal input[type='time']").value,
-    activity: document.querySelector("#modal select").value
-  };
+  const name = modal.querySelector("input[placeholder='Ваше имя']").value;
+  const phone = modal.querySelector("input[placeholder='Телефон']").value;
+  const date = modal.querySelector("input[type='date']").value;
+  const time = modal.querySelector("input[type='time']").value;
+  const activity = modal.querySelector("select").value;
 
-  if (!data.from_name || !data.phone || !data.date || !data.time) {
+  if (!name || !phone || !date || !time) {
     alert("Заполни все поля 🙂");
     return;
   }
 
-  emailjs.send("Park2026.".trim(), "template_a1poeuj".trim(), data)
+  const data = {
+    from_name: name,
+    phone: phone,
+    date: date,
+    time: time,
+    activity: activity
+  };
+
+  emailjs.send("Park2026", "template_a1poeuj", data)
     .then(() => {
       alert("Заявка отправлена 👍");
       modal.classList.remove("active");
     })
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log("EmailJS error:", error);
       alert("Ошибка отправки");
     });
 }
